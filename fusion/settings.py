@@ -13,7 +13,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 from pathlib import Path
 
-from django.conf.global_settings import EMAIL_BACKEND
+import dj_database_url
+from django.conf.global_settings import EMAIL_BACKEND, LOGOUT_REDIRECT_URL
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -137,7 +138,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # e-mail teste console
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 """
 # Email para produção
@@ -148,3 +149,9 @@ EMAIL_TSL = 'True'
 EMAIL_HOST_PASSWORD = 'fusion'
 DEFAULT_FROM_EMAIL = 'contato@fusion.com.br'
 """
+
+DATABASES = {
+    'default': dj_database_url.config()
+}
+
+LOGOUT_REDIRECT_URL = 'index'
