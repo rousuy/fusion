@@ -2,6 +2,7 @@ import uuid
 from django.db import models
 from stdimage.models import StdImageField
 
+
 def get_file_path(_instance, filename):
     ext = filename.split('.')[-1]
     filename = f'{uuid.uuid4}.{ext}'
@@ -15,6 +16,7 @@ class Base(models.Model):
 
     class Meta:
         abstract = True
+
 
 class Servico(Base):
     ICONE_CHOICES = (
@@ -60,7 +62,7 @@ class Funcionario(Base):
     class Meta:
         verbose_name = 'Funcionário'
         verbose_name_plural = 'Funcionários'
-        
+
         def __str__(self):
             return self.nome
 
@@ -84,5 +86,3 @@ class Recurso(Base):
 
     def __str__(self):
         return self.recurso
-
-

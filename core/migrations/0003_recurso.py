@@ -19,7 +19,14 @@ class Migration(migrations.Migration):
                 ('ativo', models.BooleanField(default=True, verbose_name='Ativo?')),
                 ('recurso', models.CharField(max_length=100, verbose_name='Recurso')),
                 ('descricao', models.TextField(max_length=120, verbose_name='Descrição')),
-                ('icone', models.CharField(choices=[('lni-rocket', 'foguete'), ('lni-laptop-phone', 'Mobile'), ('lni-cog', 'Engrenagem'), ('lni-layers', 'Camadas'), ('lni-leaf', 'Folhas'), ('lni-leaf', 'Folhas')], max_length=16, verbose_name='Ícone')),
+                ('icone', models.CharField(choices=[
+                    ('lni-rocket', 'foguete'),
+                    ('lni-laptop-phone', 'Mobile'),
+                    ('lni-cog', 'Engrenagem'),
+                    ('lni-layers', 'Camadas'),
+                    ('lni-leaf', 'Folhas'),
+                    ('lni-leaf', 'Folhas')
+                ], max_length=16, verbose_name='Ícone')),
             ],
             options={
                 'verbose_name': 'Recurso',
