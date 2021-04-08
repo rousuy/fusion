@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-6&*gud*cb9mez$o4d)9&9b$*g9y5q#7js$1&u%#ws5hb=#3a(&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -137,8 +137,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# e-mail teste console 
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# e-mail teste console
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 """
 # Email para produção
@@ -149,9 +149,9 @@ EMAIL_TSL = 'True'
 EMAIL_HOST_PASSWORD = 'fusion'
 DEFAULT_FROM_EMAIL = 'contato@fusion.com.br'
 """
-
+"""
 DATABASES = {
     'default': dj_database_url.config()
 }
-
+"""
 LOGOUT_REDIRECT_URL = 'index'

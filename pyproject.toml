@@ -16,6 +16,8 @@ django-adminlte2 = "^0.4.3"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^3.9.0"
+coverage = "^5.5"
+model-mommy = "^2.0.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
